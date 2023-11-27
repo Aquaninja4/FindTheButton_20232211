@@ -8,8 +8,10 @@
 int appWidth, appHeight, smallerDimension;
 PFont georgia;
 Boolean OS_On = false;
-float middleTileX, middleTileY, TileWidth, TileHeight;
+Boolean programStart = false;
+float middletileX, middletileY, tileWidth, tileHeight;
 float ssClickX, ssClickY, ssClickWidth, ssClickHeight;
+color resetColour=#FFFFFF, white=#FFFFFF;
 //
 void setup() {
   //fullScreen();
@@ -22,30 +24,21 @@ void setup() {
   displayAlgorithm();
   //
   textSetup();
-  //
-  //Population
-  float centerX =appWidth*1/2, centerY = appHeight*1/2;
-  TileWidth = appWidth*1/3;
-  TileHeight = appHeight*1/3;
-  //
-  middleTileX = centerX-TileWidth*1/2;
-  middleTileY = centerY-mileHeight*1/2;
-  //
-  ssClickWidth = appWidth*1/2;
-  ssClickHeight = appHeight*1/10;
-  ssClickX = centerX-ssClickWidth*1/2;
-  ssClickY = centerY-ssClickHeight*1/2;
-  //
+  population();
+  loadImagesSetup():
   //DIVs
-  rect(middleTileX, middleTileY, TileWidth, TileHeight);
+  rect(middletileX, middletileY, tileWidth, tileHeight);
   //rect();
 } //End setup
 //
 void draw() {
-  if (OS_On == true ) splashScreen();
+  if (OS_On == true && programStart == false) splashScreen();
+  if (OS_On == true && programStart == true) homeScreen();
 } //End draw
 //
 void keyPressed() {
+  if (key == ' ') programStart = true;
+  if (key==CODED || keyCode==ESC) exit();
 } //End keyPressed
 //
 void mousePressed() {
