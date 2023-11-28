@@ -14,8 +14,11 @@ void backgroundRect () {
 void backgroundImage () {
   backgroundRect();
   //Tint Code: brughtness, night mode
-  image(backgroundImage, );
+  image(backgroundImage, backgroundX, backgroundY,backgroundWidth,backgroundHeight);
 }//End Background image
-backgroundImage - loadImage ("")
-void loadImagesSetup() {} // End Load Images ()
+void loadImagesSetup() {
+  String Pathway = "../Images/";
+  String thumbsUpImage = "360_F_115207580_US2etunH78I7iMYHOoNVvxQTCIdoPdRj.jpg";
+  backgroundImage = loadImage (Pathway + thumbsUpImage);
+} // End Load Images ()
 //End Images Main

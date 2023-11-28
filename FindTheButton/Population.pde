@@ -3,8 +3,13 @@ void population() {
   tileWidth = appWidth*1/3;
   tileHeight = appHeight*1/3;
   //
-  middletileX = centerX-tileWidth*1/2;
-  middletileY = centerY-tileHeight*1/2;
+  topY = appHeight*0;
+  middleY = centerY-tileHeight*1/2;
+  bottomY = middleY + tileHeight;
+  //
+  leftX = appWidth*0;
+  middleX = centerX-tileWidth*1/2;
+  rightX = middleX+tileWidth;
   //
   ssClickWidth = appWidth*1/2;
   ssClickHeight = appHeight*1/10;

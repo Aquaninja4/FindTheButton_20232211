@@ -9,7 +9,7 @@ int appWidth, appHeight, smallerDimension;
 PFont georgia;
 Boolean OS_On = false;
 Boolean programStart = false;
-float middletileX, middletileY, tileWidth, tileHeight;
+float leftX, middleX, rightX,topY,middleY,bottomY, tileWidth, tileHeight;
 float ssClickX, ssClickY, ssClickWidth, ssClickHeight;
 color resetColour=#FFFFFF, white=#FFFFFF;
 //
@@ -25,10 +25,19 @@ void setup() {
   //
   textSetup();
   population();
-  loadImagesSetup():
+  loadImagesSetup();
   //DIVs
-  rect(middletileX, middletileY, tileWidth, tileHeight);
-  //rect();
+  rect (leftX, topY, tileWidth, tileHeight);
+  rect (middleX, topY, tileWidth, tileHeight);
+  rect (rightX, topY, tileWidth, tileHeight);
+  //
+  rect(leftX, middleY, tileWidth, tileHeight);
+  rect(middleX, middleY, tileWidth, tileHeight);
+  rect(rightX, middleY, tileWidth, tileHeight);
+  //
+  rect(leftX, bottomY, tileWidth, tileHeight);
+  rect(middleX, bottomY, tileWidth, tileHeight);
+  rect(rightX, bottomY, tileWidth, tileHeight);
 } //End setup
 //
 void draw() {
