@@ -24,4 +24,7 @@ void splashScreenText () {
   fill(resetColourInk);
 } // End Splash Screen Text
 //
+void buttonText () {
+  
+}
 //End Text

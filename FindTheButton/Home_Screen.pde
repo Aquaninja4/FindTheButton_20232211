@@ -6,18 +6,20 @@ void homeScreen() {
   backgroundImage(); //See Images
   noTint();
   /*
-    rect (leftX, topY, tileWidth, tileHeight);
-  rect (middleX, topY, tileWidth, tileHeight);
-  rect (rightX, topY, tileWidth, tileHeight);
+  rect (leftX, topY, tileWidth, tileHeight);  //top left
+  rect (middleX, topY, tileWidth, tileHeight); // top middle
+  rect (rightX, topY, tileWidth, tileHeight); // top right
   //
-  rect(leftX, middleY, tileWidth, tileHeight);
-  rect(middleX, middleY, tileWidth, tileHeight);
-  rect(rightX, middleY, tileWidth, tileHeight);
+  rect(leftX, middleY, tileWidth, tileHeight); // middle left
+  rect(middleX, middleY, tileWidth, tileHeight); // middle
+  rect(rightX, middleY, tileWidth, tileHeight); // middle right
   //
-  rect(leftX, bottomY, tileWidth, tileHeight);
-  rect(middleX, bottomY, tileWidth, tileHeight);
-  rect(rightX, bottomY, tileWidth, tileHeight);
+  rect(leftX, bottomY, tileWidth, tileHeight); //bottom left
+  rect(middleX, bottomY, tileWidth, tileHeight); // bottom middle
+  rect(rightX, bottomY, tileWidth, tileHeight); // bottom right
   */
+  
+
 } // End Home Screen
 //
 //End Home Screen Main

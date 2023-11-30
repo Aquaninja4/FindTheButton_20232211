@@ -21,4 +21,8 @@ void population() {
   backgroundWidth = appWidth-1;
   backgroundHeight = appHeight-1;
   //
+  startButtonX = appWidth*1/3+middleX*1/2;
+  startButtonY = appHeight*1/3+middleY*1/2;
+  startButtonWidth = appHeight*1/4;
+  startButtonHeight = appHeight*1/4;
 }//End Population

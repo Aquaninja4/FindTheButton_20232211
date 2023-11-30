@@ -11,6 +11,7 @@ Boolean OS_On = false;
 Boolean programStart = false;
 float leftX, middleX, rightX,topY,middleY,bottomY, tileWidth, tileHeight;
 float ssClickX, ssClickY, ssClickWidth, ssClickHeight;
+float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
 color resetColour=#FFFFFF, white=#FFFFFF;
 //
 void setup() {
@@ -41,6 +42,7 @@ void setup() {
 } //End setup
 //
 void draw() {
+  rect(startButtonX, startButtonY, startButtonWidth, startButtonHeight);
   if (OS_On == true && programStart == false) splashScreen();
   if (OS_On == true && programStart == true) homeScreen();
 } //End draw
@@ -51,6 +53,7 @@ void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
+   println("Mouse X: ", mouseX, "Mouse Y:", mouseY);
   if (OS_On == false ) OS_On = true;
 } //End mousePressed
 //
