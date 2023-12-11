@@ -20,5 +20,4 @@ void displayAlgorithm () {
     exit();
     //Optional: "Are You Sure" Exit Screen, YES or NO
   }
-  //Hint: "turn phone."
 } //End Display Algorithm

@@ -2,7 +2,7 @@
  holding buttons make different colour than hover over?\
  different shapes as buttons?
  set a button on a timer then make it disappear after X amount of seconds  ?
- 
+ you must make a choice to pick one button over another and the other gets left behind 
  */
 //Global Variables
 int appWidth, appHeight, smallerDimension;

@@ -25,6 +25,8 @@ void splashScreenText () {
 } // End Splash Screen Text
 //
 void buttonText () {
-  
+  precodeText();
+  text();
+  fill(resetColourInk);
 }
 //End Text
