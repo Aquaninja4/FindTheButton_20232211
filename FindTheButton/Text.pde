@@ -3,7 +3,8 @@ int size;
 //
 color black =#000000, resetColourInk = #FFFFFF;
 //
-String ssClick = "Click To Start";
+String ssClick = "Click Here To Start";
+String restartButton = "Restart";
 //
 void textSetup () { //End Text Setup
   //Text Setup
@@ -18,15 +19,15 @@ void precodeText () {
 void splashScreenText () {
   rect(ssClickX, ssClickY, ssClickWidth, ssClickHeight);
   precodeText();
-  size = 55;
+  size = 35;
   textFont(georgia, size);
   text(ssClick, ssClickX, ssClickY, ssClickWidth, ssClickHeight);
   fill(resetColourInk);
 } // End Splash Screen Text
 //
-void buttonText () {
+void restartButtonText () {
   precodeText();
-  text();
+  text(restartButton, restartButtonX, restartButtonY, restartButtonWidth, restartButtonHeight);
   fill(resetColourInk);
 }
 //End Text

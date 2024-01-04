@@ -2,16 +2,18 @@
  holding buttons make different colour than hover over?\
  different shapes as buttons?
  set a button on a timer then make it disappear after X amount of seconds  ?
- you must make a choice to pick one button over another and the other gets left behind 
+ you must make a choice to pick one button over another and the other gets left behind
  */
 //Global Variables
 int appWidth, appHeight, smallerDimension;
 PFont georgia;
 Boolean OS_On = false;
 Boolean programStart = false;
-float leftX, middleX, rightX,topY,middleY,bottomY, tileWidth, tileHeight;
+float leftX, middleX, rightX, topY, middleY, bottomY, tileWidth, tileHeight;
 float ssClickX, ssClickY, ssClickWidth, ssClickHeight;
-float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
+float restartButtonX, restartButtonY, restartButtonWidth, restartButtonHeight;
+float titleButtonX, titleButtonY, titleButtonWidth, titleButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth,  quitButtonHeight; 
 color resetColour=#FFFFFF, white=#FFFFFF;
 //
 void setup() {
@@ -27,24 +29,24 @@ void setup() {
   textSetup();
   population();
   loadImagesSetup();
-  //DIVs
-  rect (leftX, topY, tileWidth, tileHeight);
-  rect (middleX, topY, tileWidth, tileHeight);
-  rect (rightX, topY, tileWidth, tileHeight);
-  //
-  rect(leftX, middleY, tileWidth, tileHeight);
-  rect(middleX, middleY, tileWidth, tileHeight);
-  rect(rightX, middleY, tileWidth, tileHeight);
-  //
-  rect(leftX, bottomY, tileWidth, tileHeight);
-  rect(middleX, bottomY, tileWidth, tileHeight);
-  rect(rightX, bottomY, tileWidth, tileHeight);
+  splashScreen(); 
+  /* //DIVs
+   rect (leftX, topY, tileWidth, tileHeight);
+   rect (middleX, topY, tileWidth, tileHeight);
+   rect (rightX, topY, tileWidth, tileHeight);
+   //
+   rect(leftX, middleY, tileWidth, tileHeight);
+   rect(middleX, middleY, tileWidth, tileHeight);
+   rect(rightX, middleY, tileWidth, tileHeight);
+   //
+   rect(leftX, bottomY, tileWidth, tileHeight);
+   rect(middleX, bottomY, tileWidth, tileHeight);
+   rect(rightX, bottomY, tileWidth, tileHeight); */
 } //End setup
 //
 void draw() {
-  rect(startButtonX, startButtonY, startButtonWidth, startButtonHeight);
-  if (OS_On == true && programStart == false) splashScreen();
-  if (OS_On == true && programStart == true) homeScreen();
+  //splashScreen(); //   if (OS_On == true && programStart == false)
+  if (OS_On == true && programStart == false) homeScreen();
 } //End draw
 //
 void keyPressed() {
@@ -53,8 +55,8 @@ void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
-   println("Mouse X: ", mouseX, "Mouse Y:", mouseY);
-  if (OS_On == false ) OS_On = true;
+  println("Mouse X: ", mouseX, "Mouse Y:", mouseY);
+    splashScreenButtons();
 } //End mousePressed
 //
 //End MAIN Program
